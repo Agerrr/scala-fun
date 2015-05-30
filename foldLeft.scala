@@ -30,7 +30,7 @@ class ScalaFun {
     case Nil => ")"
   }
 
-  def reverse[A](list: List[A]): List[A] = list.foldLeft(List[A]()) ((r, c) => c :: r)
+  def reverse[A](list: List[A]): List[A] = list.foldLeft(List[A]())((r,c) => c :: r)
 
   def unique[A](list: List[A]): List[A] = list.foldLeft(List[A]()) ((r, c) => if (r.contains(c)) r else c :: r).reverse
 

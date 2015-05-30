@@ -1,3 +1,4 @@
+// import org.scalatest.Matchers._
 // An object is a singleton.
 object Greeting {
   def english = "Hi"
@@ -9,9 +10,12 @@ object Greeting {
   def magyar = "Szia"
 }
 
-val x = Greeting
-val y = x
-val z = Greeting
+class ObjectTutorial {
 
-x eq y should be(true)
-x eq z should be(true)
+  val x = Greeting
+  val y = x
+  val z = Greeting
+
+  // (x.eq(y)) should be (true)
+  // (x.eq(z)) should be (true)
+}
