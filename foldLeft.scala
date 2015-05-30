@@ -37,4 +37,7 @@ class ScalaFun {
   def toSet[A](list: List[A]): Set[A] = list.foldLeft(Set[A]()) ((r, c) => r + c)
 
   def double[A](list: List[A]): List[A] = list.foldLeft(List[A]()) ((r, c) => c :: c :: r).reverse
+
+  def removeSimilar(list: List[String]): List[String] =
+    list.foldLeft((List[String](), Set[String]())) ((r, c) => if (r._2.contains(c)) r else (c :: r._1, r._2 + c))._1
 }
