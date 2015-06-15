@@ -1,3 +1,5 @@
-libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.1.2"
-
-libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.4" % "test"
+libraryDependencies ++= Seq(
+  "org.scalaz" %% "scalaz-core" % "7.1.2",
+  "org.scalaz" %% "scalaz-core" % "7.1.2",
+  "org.scalacheck" %% "scalacheck" % "1.12.4" % "test"
+  )
